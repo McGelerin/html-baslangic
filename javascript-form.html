@@ -1,0 +1,99 @@
+<html>
+    <head>
+        <title>Javascripte Formlar</title>
+        
+        <script>
+            function týkla1() {
+                //var deger= document.forms["kayýt"]["username"].value;     yöntem1
+                var deger = document.kayýt.username.value;   //2. yöntem daha kolay
+                window.alert(deger);
+            }
+
+            function týkla2() {
+                var deger2 = document.form2.isim.value;
+                if (deger2 == "") {
+                    window.alert("Lütfen Veri giriniz");
+                    return false;
+                }
+                else {
+                    window.alert(deger2);
+                }
+            }
+
+            function dogrula() {
+                var deger = document.getElementById("girdi").value;
+                
+                if (isNaN(deger) == true) {
+                    window.alert("Bu Sayý deðil")
+                }
+
+                else {
+                    window.alert("Girdiðiniz bir sayý")
+                }
+            }
+
+            function kontrol2() {
+
+                var x = document.getElementById(sayii).value;
+
+                if (x.checkValidity() == false) {
+                    window.alert(x.validationMessage);
+                }
+
+                else {
+                    window.alert("Sayý geçerli");
+                }
+            }
+
+
+        </script>
+
+    </head>
+    
+    <body>
+        
+        
+        <h1>Javascript de Formlar</h1>
+        <p>Burada javascript ile formdan veri çekmek ve windows.alert ile veriyi yazmayý göstereceðim.</p>
+        
+        <h2>1) Formlara eriþim</h2>
+        <form name="kayýt" method="post" action="gönder.php" >
+            <label>Kullanýcý Adý::</label><input type="text" name="username" /><br />
+            <button onclick="týkla1()">Gönder</button>
+        </form>
+        
+        <h2>2)Form Doðrulama iþlemi</h2>
+        <p>Bu örnekte yukarýdaki iþlemi yaptýktan sonra baþka sayfaya gitmemek için yapmamýz gereken iþlemliri yaptýk.</p><br />
+        
+        <h3>Örnek1)Kontrol Ýþlemi</h3>
+        <form name="form2" action="gönder.php" onsubmit="return týkla2()" method="post">
+            <label>Ýsim Alaný::</label><input type="text" name="isim" /> &nbsp;
+            <input type="submit" value="Gönder" />
+        </form>
+
+        <h3>Örnek 2) Sayý olup olmadýðýnýn Kontrolü</h3>
+        <p>Burada isNaN() fonksiyonunu kullandýk. bu fonksiyon ile içine girilen karakter sayý deðilse true döner. </p>
+        <input id="girdi" /><br />
+        <button onclick="dogrula()">Kontrol Et</button>
+
+        <h3>Örnek 3) required Kullanýmý</h3>
+        <p> required i &lt;input /&gt; içinde kullanýrýz. Bununla birlikte o alana doldurmamýzýn zorunlu olduðýný gösterir.</p>
+        <form action="gönder.php" name="form5" method="post">
+            <input type="text" name="isimm" required />
+            <input type="submit" value="Gönder" />
+        </form>
+
+        <h3>Örnek 4)Form Apileri</h3>
+        <p>Bu örnekte .cheackvalidity() ve .validationMesage nin kullanýmýný göreceðiz.</p>
+        <input id="sayii" type="number" min="50" max="100" required />
+        <button onclick="kontrol2">Kontrol et</button>
+
+        
+
+
+
+
+    </body>
+    
+
+</html>

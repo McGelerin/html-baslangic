@@ -1,0 +1,91 @@
+<html>
+    <head>
+        <title>Form-Etiketleri</title>
+    </head>
+    <body>
+        <h1>Bu Bölümde Form Etiket ve Parametrelerini Göreceðiz</h1>
+        <p>
+            <h3>Etiketler:</h3>
+            &lt;form&gt; &lt;/form&gt; ::: Form yapýsýnýn ana etiketidir.<br />
+            &lt;input/&gt; ::: Veri çekmek için kullanýlan etikettir. &lt;form&gt; &lt;/form&gt; etiketi içinde kullanýlýr.<br />
+            &lt;label&gt; &lt;/label&gt; ::: Etiket vermemize yarar<br />
+            &lt;select&gt; &lt;/select&gt; ::: Açýlýr liste oluþturmaya yarar.<br />
+            &lt;option&gt; &lt;/option&gt; ::: Açýlýr liste elemanlarýný yazdýðýmýz yer.<br />
+            &lt;optgroup&gt; &lt;/optgroup&gt; ::: Açilýr pencereleri gruplandýrmaya yarar.<br />
+            &lt;fieldset&gt; &lt;/fieldset&gt; ::: Formlarý düzenli gruplara ayýrýr.<br />
+            &lt;legend&gt; &lt;/legend&gt; ::: Gruplanmýþ formlara isim verir.
+            <h3>Parametreler:</h3>
+            name="" ::: Etiketlere ism vermek için kullanýlýr.<br />
+            id="" ::: Etiketlere id vermemize yarar.  <br />
+            methot="" ::: Verilerin nasýl iletileceðini seçmemize yarar. <br />
+            type="" ::: Verinin tipini belirtir. <br />
+            value="" ::: Etikete yazý yazmamýzý saðlar. <br />
+            placeholder="" ::: Etikete yazý yazmamýzý saðlar.Yazmaya baþlarken silinir. <br />
+            maxlenght="" ::: Alýnabilecek max karakter sayýsýný belirlememize yarar. <br />
+            size="" ::: Kutunun uzunluk deðerini belirlememize yarar.<br />
+            for="" ::: Labelin içinde kullanýlýr. Ýnput un id si içine yazýlýrsa labele týklanýnca textbox a girer.<br />
+            disabled="disabled" ::: Açýlýr listede seçim yapýlmamasýný istediðimiz durumlarda kullanýlýr.
+
+        </p>
+
+        <h2>Örnek Form Etiketleri:</h2>
+        
+        <form name="" id="" method="post" >
+            
+            <label for="value">value="Lütfen adýnýzý giriniz"::</label><input type="text" name="value" id="value" value="Lütfen adýnýzý giriniz" maxlength="5" /><br />
+            <label for="placeholder">placeholder="Lütfen adýnýzý giriniz"::</label><input type="text" name="placeholder" id="placeholder" value="" placeholder="Lütfen adýnýzý giriniz" maxlength="5" />
+           
+            <h3>Parola Oluþturur iken(type="password")</h3>
+            <label for="parola">Parola:</label><input type="password" name="parola" id="parola" value="" />
+
+            <h3>Checkbox ile Form Oluþturma(type="checkbox")</h3>
+            Soru:: Aþaðýdaki sosyal media uygulamalarýndan hangisi veya hangilerini kullanýyorsunuz?<br />
+            <label for="facebook">Facebook</label><input type="checkbox" name="facebook" id="facebook" /> &nbsp;
+            <label for="instagram">Ýnstagram</label><input type="checkbox" name="instagram" id="instagram" /> &nbsp;
+            <label for="snapchat">Snapchat</label><input type="checkbox" name="snapchat" id="snapchat" /> &nbsp;
+
+            <h3>Radio ile Form oluþturma (type="radio") </h3>
+            <h4>Not: Radio etiketinde (name="") leri ayný yapmalýyýz. Katagorileri ayný olmalýdýr...</h4>
+            Soru:: Cinsiyetiniz nedir?<br />
+            <label for="kadin">Kadýn</label><input type="radio" name="cinsiyet" id="kadin" checked="checked"/> &nbsp;
+            <label for="erkek">Erkek</label><input type="radio" name="cinsiyet" id="erkek" /> &nbsp;
+
+            <h3>type="sumit" ve type="reset" Parametreleri ile Buton Oluþturma</h3>
+            <input type="submit" value="Kaydet" />&nbsp;
+            <input type="reset" value="Vazgeç"/>
+
+            <h3>Dosya Yükleme Parametresi(type="file")</h3>
+            <label for="yukle">Dosya Yükle</label><input type="file" id="yukle" value="" /><br />
+
+            <h3>Açýlýr Liste Oluþturma</h3>
+            Soru:: Ýlk öðrendiðiniz programlama dili? ::>
+            <select>
+                <option value="" disabled selected>Lütfen bir seçim yapýnýz</option>
+                <optgroup label="Kategori 1">
+                    <option value="c">C</option>
+                    <option value="C++">C++</option>
+                    <option value="Java">Java</option>
+                    <option value="Phython">Python</option>
+                </optgroup>
+                <optgroup label="Kategori 2">
+                    <option value="c">C</option>
+                    <option value="C++">C++</option>
+                    <option value="Java">Java</option>
+                    <option value="Phython">Python</option>
+                </optgroup>
+            </select>
+
+            <h3>&lt;fieldset&gt; &lt;/fieldset&gt; ile Örnek Gruplanmýþ Form </h3>
+            <fieldset>
+                <legend>Üye Kayýt</legend>
+                <label for="uye_k.adý">Kullanýcý Adý::</label><input type="text" name="uye_k.adý" id="uye_k.adý" value="" placeholder="Lütfen Kullanýcý adýnýzý giriniz" maxlength="10" /><br />
+                <label for="parola">Parola:</label><input type="password" name="parola" id="parola" value="" maxlength="8" /><br />
+                <label for="parola_tekrar">Parola Tekrar:</label><input type="password" name="parola_tekrar" id="parola_tekrar" value="" maxlength="8" />
+                <input type="submit" value="Kaydet" />
+            </fieldset>
+
+        </form>
+
+
+    </body>
+</html>

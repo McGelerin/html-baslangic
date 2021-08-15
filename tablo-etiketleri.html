@@ -1,0 +1,101 @@
+<html>
+    <head>
+        <title>Html-Tablo-Etiketleri</title>
+    </head>
+    <body>
+        <h1>Html Tablo Etiketleri</h1>
+        <h2>Html de kullanacaðýmýz tablo etiketleri aþaðýdaki gibidir;</h2>
+        <p>
+            1)&lt;table&gt; : Tablo etiketini kullanabilmemiz için baþta yazmamýz gereken parametre.<br />
+            2)&lt;tr&gt;(Table Row) :Satýr etiketi <br />
+            3)&lt;td&gt;(Table Data) :Satýrlara yazacapýmýz datalarý bu etiketin içine yazýlýr. <br />
+            4)&lt;th&gt; :Tablo baþlýklarýný kalýn yazar. <br />
+            5)&lt;caption&gt; :Tabloya isim verir. <br />
+            6)&lt;colspan&gt; :Yatayda tabloyu birleþtirmeye yarar. <br />
+            7)&lt;rowspan&gt; :Dikeyde tabloyu birleþtirmede yarar. <br />
+        </p>
+
+        <h2>Aþaðýya Örnek Bir Tablo Oluþturalým:</h2>
+
+        <table border="1">
+            <tr><td>Burasý 1. sütun</td><td>Burasý 2. sütun</td><td>Burasýda 3. sütun</td></tr>
+            <tr><td>Bir</td><td>Ýki</td><td>&nbsp;</td></tr>
+        </table>
+
+        <h2>Aþaðýya Geliþmiþ Bir Tablo Oluþturalým:</h2>
+
+        <table border="1">
+            <caption>Akýllý Cep Telefonlarý</caption>
+            <tr>
+                <th>Ürün Adý</th>   <th>Ürün Açýklamasý</th>    <th>Fiyat</th>
+            </tr>
+
+            <tr>
+                <td>Samsung</td>    <td>Galaxy S3</td>  <td>&nbsp;</td>
+            </tr>
+
+            <tr>
+                <td>Apple</td>  <td>Ýphone 5</td>   <td>&nbsp;</td>
+            </tr>
+
+            <tr>
+                <td>Lg</td> <td>G</td>  <td>&nbsp;</td>
+            </tr>
+
+            <tr>
+                <td>Nokia</td>  <td>a70</td>    <td>&nbsp;</td>
+            </tr>
+
+            <tr>
+                <td>HTC</td>    <td>one x+</td> <td>&nbsp;</td>
+            </tr>
+
+        </table>
+
+        <h2>Aþaðýya Geliþmiþ Bir Tablo Oluþturalým:</h2>
+
+        <table border="1" width="50%">
+            <caption>Akýllý Cep Telefonlarý</caption>
+            
+            <tr>
+                <th>Markalar</th><th>Ürün Adý</th><th>Ürün Açýklamasý</th><th>Fiyat</th>
+            </tr>
+
+            <tr>
+                <td colspan="4">Burada colspan="4" Kullandýk</td>
+            </tr>
+
+            <tr>
+                <td rowspan="3">Samsung</td><td>Galaxy S3</td><td>&nbsp;</td><td>1500tl</td>
+            </tr>
+
+            <tr>
+                <td>Galaxy S4</td><td>&nbsp;</td><td>1500tl</td>
+            </tr>
+
+            <tr>
+                <td>Galaxy S5</td><td>&nbsp;</td><td>1500tl</td>
+            </tr>
+
+            <tr>
+                <td>Apple</td><td>Ýphone 5</td><td>&nbsp;</td><td>1500tl</td>
+            </tr>
+
+            <tr>
+                <td>Lg</td><td>G</td><td>&nbsp;</td><td>1500tl</td>
+            </tr>
+
+            <tr>
+                <td>Nokia</td><td>a70</td><td>&nbsp;</td><td>1500tl</td>
+            </tr>
+
+            <tr>
+                <td>HTC</td><td>one x+</td><td>&nbsp;</td><td>1500tl</td>
+            </tr>
+
+        </table>
+
+    </body>
+
+
+</html>
